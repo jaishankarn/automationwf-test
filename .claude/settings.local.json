@@ -10,7 +10,10 @@
       "Bash(cat:*)",
       "Bash(npm install)",
       "Bash(npm run build:*)",
-      "Bash(npm run start:*)"
+      "Bash(npm run start:*)",
+      "Bash(git rebase:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
