@@ -1,6 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
+import { AppInfoDto } from './dto/app-info.dto';
 
 @ApiTags('app')
 @Controller()
@@ -12,13 +13,9 @@ export class AppController {
   @ApiResponse({
     status: 200,
     description: 'Returns application information',
-    example: {
-      name: 'MCP Workflow Automation',
-      version: '1.0.0',
-      description: 'Automated workflow orchestration API'
-    }
+    type: AppInfoDto,
   })
-  getAppInfo(): object {
+  getAppInfo(): AppInfoDto {
     return this.appService.getAppInfo();
   }
 }

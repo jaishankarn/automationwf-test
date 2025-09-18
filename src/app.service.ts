@@ -1,12 +1,14 @@
 import { Injectable } from '@nestjs/common';
+import { AppInfoDto } from './dto/app-info.dto';
+import * as packageJson from '../package.json';
 
 @Injectable()
 export class AppService {
-  getAppInfo(): object {
+  getAppInfo(): AppInfoDto {
     return {
-      name: 'MCP Workflow Automation',
-      version: '1.0.0',
-      description: 'Automated workflow orchestration between Claude Code, GitHub, Linear, and Greptile using MCP integrations',
+      name: packageJson.name,
+      version: packageJson.version,
+      description: packageJson.description,
       status: 'running',
       timestamp: new Date().toISOString(),
     };

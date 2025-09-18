@@ -1,5 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { HealthCheckDto } from '../dto/health-check.dto';
+import { DetailedHealthCheckDto } from '../dto/detailed-health-check.dto';
+import * as packageJson from '../../package.json';
 
 @Injectable()
 export class HealthService {
@@ -8,11 +10,11 @@ export class HealthService {
       status: 'ok',
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
-      version: '1.0.0',
+      version: packageJson.version,
     };
   }
 
-  async getDetailedHealthStatus(): Promise<object> {
+  async getDetailedHealthStatus(): Promise<DetailedHealthCheckDto> {
     const baseHealth = await this.getHealthStatus();
 
     return {

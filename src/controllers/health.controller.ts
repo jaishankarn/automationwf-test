@@ -2,6 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { HealthService } from '../services/health.service';
 import { HealthCheckDto } from '../dto/health-check.dto';
+import { DetailedHealthCheckDto } from '../dto/detailed-health-check.dto';
 
 @ApiTags('health')
 @Controller('health')
@@ -24,8 +25,9 @@ export class HealthController {
   @ApiResponse({
     status: 200,
     description: 'Detailed health status including dependencies',
+    type: DetailedHealthCheckDto,
   })
-  async getDetailedHealth(): Promise<object> {
+  async getDetailedHealth(): Promise<DetailedHealthCheckDto> {
     return this.healthService.getDetailedHealthStatus();
   }
 }

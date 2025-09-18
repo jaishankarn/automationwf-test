@@ -13,7 +13,10 @@
       "Bash(npm run start:*)",
       "Bash(git rebase:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "mcp__github__create_pull_request",
+      "mcp__github__get_pull_request_comments"
     ],
     "deny": [],
     "ask": []

@@ -1,7 +1,6 @@
 # Compiled output
 /dist
 /node_modules
-*.tgz
 
 # Logs
 logs
@@ -57,7 +56,6 @@ docker-compose*.yml
 
 # Build artifacts
 build/
-dist/
 
 # Package manager
 .npm
@@ -84,9 +82,6 @@ pids
 
 # Dependency directories
 jspm_packages/
-
-# Optional npm cache directory
-.npm
 
 # Optional eslint cache
 .eslintcache
