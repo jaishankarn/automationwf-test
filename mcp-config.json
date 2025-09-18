@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "linear": {
+      "command": "npx",
+      "args": ["@tacticlaunch/mcp-linear"],
+      "env": {
+        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
+      }
+    },
+    "github": {
+      "command": "github-mcp-server",
+      "args": ["--token", "${GITHUB_TOKEN}"]
+    },
+    "greptile": {
+      "command": "greptile-mcp-server",
+      "args": ["--api-key", "${GREPTILE_API_KEY}"]
+    }
+  }
+}

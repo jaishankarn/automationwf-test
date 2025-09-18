@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude:*)",
+      "mcp__linear-server__create_project",
+      "mcp__github__search_repositories",
+      "mcp__linear-server__create_issue",
+      "mcp__linear-server__list_issues",
+      "mcp__linear-server__update_issue",
+      "Bash(cat:*)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(npm run start:*)",
+      "Bash(git rebase:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "mcp__github__create_pull_request",
+      "mcp__github__get_pull_request_comments"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
